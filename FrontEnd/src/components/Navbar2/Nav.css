@@ -1,0 +1,82 @@
+
+.icon-size {
+    font-size: 2rem;
+    display: flex;
+    align-items: center;
+    margin-left: 10px;
+  }
+  #img-logo{
+    width: 120px;
+  }
+  .icon{
+    display: flex;
+    align-items: center;
+  }
+  .icon:hover{
+    color: #00a8ff;
+  }
+  .icon-size .user-name{
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .container-input {
+    position: relative;
+  }
+  #logout{
+    color: black;
+    margin-top: 2.5px;
+  }
+  #logout:hover{
+    color: #00a8ff;
+  }
+  .input-pesquisa {
+    width: 140px;
+    padding: 8px 0px 8px 35px;
+    border-radius: 9999px;
+    color: #333;
+    border: solid 1px #333;
+    transition: all .2s ease-in-out;
+    outline: none;
+    font-size: 10pt;
+    opacity: 0.8;
+  }
+  
+  .container-input svg {
+    position: absolute;
+    top: 50%;
+    left: 10px;
+    transform: translate(0, -50%);
+  }
+  
+  .input-pesquisa:focus {
+    opacity: 1;
+    width: 250px;
+  }
+  .btn_nav{
+    margin: 0px, 20px, 0px, 50px;
+    margin-left: 10px;
+    background-image: linear-gradient(to top, #48c6ef 0%, #6f86d6 100%);
+    border: transparent;
+    border-radius: 15px;
+    font-weight: 500;
+    color: #fff;
+   
+    background-image: linear-gradient(to top,  #00aaffb7 0%,  #00a8ff 100%);
+   
+  }
+  @media (max-width: 600px) {
+    .icon {
+      flex-direction: row;
+      display: block;
+
+    }
+    .icon-size{
+      flex-direction: row;
+      margin-left: 0px;
+    }
+    .btn_nav{
+      margin-top: 8px;
+      margin-left: 0px;
+    }
+  }

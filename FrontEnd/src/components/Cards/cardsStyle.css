@@ -1,0 +1,110 @@
+.card img{
+  padding-left: 5px;
+  padding-top: 5px;
+  padding-right: 5px;
+}
+#edit-name{
+  color: black;
+  font-weight: 600;
+  margin-top: -17px;
+
+}
+.col-price{
+  display: flex;
+  justify-content: left;
+}
+.col-master{
+  display: flex;
+  justify-content: space-between;
+  margin-top: -26px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  max-width: 200px;
+  margin: auto;
+  font-family: arial;
+}
+.card h1{
+  font-size: 1.3em;
+  margin-top: -15px;
+}
+
+.btn-group{
+  justify-content: end;
+}
+.price {
+  color: grey;
+  font-size: 18px;
+  margin-top: 15px;
+
+}
+
+.card button {
+  border: none;
+  outline: 0;
+  
+  color: white;
+  
+  text-align: center;
+  cursor: pointer;
+  width: 100%;
+  max-width: 200px;
+  font-size: 2em;
+
+}
+
+.card button:hover {
+  opacity: 0.7;
+}
+.details-edit{
+  text-decoration: none;
+  align-items: center;
+  color: black;
+  border-color: black;
+  font-size: 26pt;
+  margin-top: 11px;
+  padding-left: 5px;
+}
+#details-edit{
+  color: black;
+  text-decoration: none;
+}
+@media (max-width: 600px) {
+  .card {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    max-width: 150px;
+    margin: auto;
+    font-family: arial;
+    
+    
+  }
+  #edit-name{
+    color: black;
+    font-weight: 600;
+
+  
+  }
+  .col-master{
+    display: flex;
+    justify-content: space-between;
+    margin-top: -26px;
+    padding-left: 5px;
+    line-height: -5px;
+    padding-right: 5px;
+  }
+  .card h1{
+    font-size: 15pt;
+    
+    line-height: -26pt;
+    padding-bottom: 0;
+    padding-top: 0;
+  }
+  .card img{
+    padding-left: 5px;
+    padding-top: 5px;
+    padding-right: 5px;
+    
+  }
+}

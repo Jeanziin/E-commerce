@@ -1,0 +1,31 @@
+.cards{
+    display: flex;
+    justify-content: start;
+
+}
+.container {
+    display: grid;
+    /* grid-template-columns: auto auto auto; */
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    grid-template-rows: 350px;
+    gap:  6em 6em 6em 6em;
+    padding-left: 20px;
+    height:700px;
+
+}
+.drops{
+    left: 250px;
+    top: 15px;
+
+}
+.cardinho img{
+    border: 1px solid transparent;
+    border-radius: 10px;
+    width: 300px;
+    height: 200px;
+}
+.cardinho button{
+    padding: 10px;
+    background-color: grey;
+
+}

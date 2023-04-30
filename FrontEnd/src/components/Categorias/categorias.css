@@ -1,0 +1,32 @@
+.categories{
+  background-color: aliceblue;
+  padding: 1px;
+}
+
+.cont_edit{
+  margin-top: 1em;
+  margin-bottom: 1em;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+
+
+}
+.icons_cartegory{
+  margin: 5px 0 5px;
+  font-size: 3em;
+
+  padding: 0px 30px 15px 30px;
+
+}
+
+.icon{
+  color: rgba(0, 0, 0, 0.884);
+  cursor: pointer;
+}
+
+p{
+  font-size: 10pt;
+  
+}

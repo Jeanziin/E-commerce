@@ -1,0 +1,30 @@
+.footer-edit{
+    background-image: url(../img/footerimg.jpg);
+
+    margin-top: 2rem;
+    
+}
+#dire-cl{
+color: #fff;
+}
+.text-edit-footer{
+    color: #fff;
+    padding-top: 0.8rem;
+}
+.img_logo_footer{
+    max-width: 150px;
+}
+.edit-h6{
+    border-bottom: 3px solid #fff;
+    max-width: 240px;
+    padding-bottom: 10px;
+
+}
+@media (max-width: 600px) {
+    .edit-h6{
+        border-bottom: 3px solid #fff;
+        max-width: none;
+        
+    
+    }
+  }
