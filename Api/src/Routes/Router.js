@@ -26,7 +26,7 @@ routes.post('/user', UserController.create)
 routes.get('/user/', UserController.index)
 routes.delete('/user/:user_id', UserController.delete)
 routes.get('/user/:user_id', UserController.findUser) 
-routes.put('/users/:user_id', UserController.update);
+routes.put('/user/:user_id', UserController.update);
 
 //Product 
 routes.post('/:user_id/product', upload.single('src'), ProductController.create)
