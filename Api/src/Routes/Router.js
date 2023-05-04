@@ -42,10 +42,10 @@ routes.post('/session', SessionController.create)
 //PruductPj
 routes.post('/:user_id/productPj', upload.single('src'), ProductPjController.create)
 routes.delete('/:user_id/productPj/:productPj_id', ProductPjController.delete)
+routes.delete('/:user_id/productPj/:productPj_id', ProductPjController.update)
 routes.get('/productPj/cords', ProductPjController.indexCords)
 routes.get('/productPj', ProductPjController.indexAll)
 routes.get('/productPj/:user_id', ProductPjController.indexByUser)
 routes.get('/productPj/this/:productPj_id', ProductPjController.indexProd)
 
 module.exports = routes
-

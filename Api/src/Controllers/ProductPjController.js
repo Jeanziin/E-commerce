@@ -109,8 +109,47 @@ module.exports = {
         }catch(err){
         return res.status(400).send(err)
         }
-    }
+    },
 
-    
-
+    async update(req, res) {
+        const { name, price, author, category, synopsis, year } = req.body;
+        const { user_id, productPj_id } = req.params;
+        const { auth } = req.headers;
+      
+        if (user_id !== auth) {
+          return res.status(401).send({ message: 'Não autorizado' });
+        }
+      
+        try {
+          const userInfo = await User.findById(user_id);
+          const { location } = userInfo;
+          const latitude = location.coordinates[0];
+          const longitude = location.coordinates[1];
+          const setLocation = {
+            type: 'Point',
+            coordinates: [longitude, latitude],
+          };
+      
+          const updatedProductPJ = await Product.findByIdAndUpdate(
+            productPj_id,
+            {
+              name,
+              price,
+              user: user_id,
+              location: setLocation,
+              author,
+              category,
+              synopsis,
+              year,
+              src: req.file.path,
+            },
+            { new: true }
+          ).populate('user');
+      
+          return res.status(200).send(updatedProductPJ);
+        } catch (err) {
+          console.log('Erro:', err);
+          return res.status(400).send({ message: 'Erro ao atualizar o produto' });
+        }
+      }
 }

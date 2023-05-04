@@ -2,7 +2,8 @@ const Product = require('../Models/Product')
 const User = require('../Models/User')
 module.exports = {
     async create(req, res) {
-        const { name, price, author, category, synopsis,year } = req.body
+        const dateUTC = new Date(Date.now()).toUTCString();
+        const { name, price, author, category, synopsis,year, dateUTC} = req.body
 
         const { user_id } = req.params
 
@@ -24,7 +25,7 @@ module.exports = {
                 coordinates: [longitude, latitude]
             }
 
-            const createdProduct = await Product.create({name, price, user: user_id, location: setLocation, author, category, synopsis, year,  src: req.file.path })
+            const createdProduct = await Product.create({name, price, user: user_id, location: setLocation, author, category, synopsis, year,  src: req.file.path, dateUTC})
             const populatedProduct = await Product.findById(createdProduct._id).populate('user')
            
 
