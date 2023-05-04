@@ -1,6 +1,8 @@
 .categories{
-  background-color: aliceblue;
+  background-color: transparent;
   padding: 1px;
+  margin-top: 2rem;
+  margin-bottom: 5rem;
 }
 
 .cont_edit{
@@ -14,19 +16,55 @@
 
 }
 .icons_cartegory{
-  margin: 5px 0 5px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  
+  width: 100px;
+  height: 100px;
   font-size: 3em;
-
-  padding: 0px 30px 15px 30px;
-
+  border-radius: 50%;
+background: #e0e0e0;
+box-shadow:  6px 6px 12px #c5c5c5,
+             -6px -6px 12px #fbfbfb;
+  transition: 1s;
+}
+.icons_cartegory:hover{
+  border:2px solid #008ECC;
+  transition: 1s;
 }
 
-.icon{
+.icon-cart{
   color: rgba(0, 0, 0, 0.884);
   cursor: pointer;
+  transition: 1s;
+}
+.icon-cart:hover{
+  color: #008ECC;
 }
 
 p{
   font-size: 10pt;
+  font-weight: 600;
   
+}
+#edit_textsize{
+  font-size: 15pt;
+  color: black;
+  border-bottom: 3px solid #008ECC;
+  max-width: 300px;
+  margin-bottom: 50px;
+  margin-top: 2rem;
+}
+#edit-h2-cat{
+  font-size: 15pt;
+  color: black;
+  border-bottom: 3px solid #008ECC;
+  max-width: 300px;
+  margin-bottom: 50px;
+  margin-left: 11px;
+}
+#edit-h2-cat span{
+  color: #008ECC;
 }

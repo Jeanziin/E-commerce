@@ -1,34 +1,30 @@
-import Carousel from 'react-bootstrap/Carousel'
-import banner01 from '../img/banner.jpg'
+import { useState } from 'react';
+
+import banner02 from '../img/banner_01.png'
 import '../Carousel/Carousel.css'
 function CarouselFadeExample() {
+  
+    const [index, setIndex] = useState(0);
+  
+    const handleSelect = (selectedIndex) => {
+      setIndex(selectedIndex);
+    };
   return (
     <div className='container edit-car'>
-    <Carousel fade>
-      <Carousel.Item>
-        <img className="d-block img-fluid" src={banner01} alt="First slide" />
+    <div className='col-t1'>
+      <div className='col-t2'>
+        <h6>Troque livros com leitores iguais a você!</h6>
+        <h1 id='edit-from-h1'>SWAP BOOK</h1>
+        <h5>Economize dinheiro, encontre pessoas interessantes e consuma menos.</h5>
+      </div>
+      <div className='col-t3'>
         
-      </Carousel.Item>
-      <Carousel.Item>
-        <img
-          className="d-block w-100"
-          src={banner01}
-          alt="Second slide"
-        />
+            <img  className='img-banner' src={banner02} alt='Second slide' />
 
-       
-      </Carousel.Item>
-      <Carousel.Item>
-        <img
-          className="d-block w-100"
-          src={banner01}
-          alt="Third slide"
-        />
 
-     
-      </Carousel.Item>
-    </Carousel>
+      </div>
     </div>
+  </div>
   )
 }
 

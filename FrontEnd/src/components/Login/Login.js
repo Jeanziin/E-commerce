@@ -4,8 +4,9 @@ import { Link, useNavigate} from 'react-router-dom';
 import api from '../../Services/Api.js';
 import { UserContext } from "../UseContext/UserContext";
 import '../Login/StyleLogin.css'
-import { Col, Container, Row } from 'react-bootstrap';
-import imgBook from '../img/undraw_Books_re_8gea.png'
+
+import banner07 from '../img/banner_02.png'
+import logos from '../img/logoFullWhite.png'
 
 
 const LoginPage = () => {
@@ -51,8 +52,50 @@ const LoginPage = () => {
   
 
   return (
-   
+    <div className='col-login1 container'>
+      <div className='col-login2'>
+        <div className='col-login3'>
+          <img alt='' id='logo-lg' src={logos}></img>
+        <form>
+       
+        <div class="inputbox">
+    <input required="required" value={email} id="email"
+              name="email" onChange={e=>setEmail(e.target.value)} type="text"></input>
+    <span>Email</span>
+    <i></i>
+</div>
+           
+            <div class="inputbox">
+    <input required="required"  onChange={e=>setPassword(e.target.value)}
+              value={password} type="text"></input>
+    <span>Senha</span>
+    <i></i>
+    </div>
+    
 
+              <button
+              onClick={loginHandle}
+              type="submit"
+              class="w-full button-name rounded-3xl text-black "
+            >
+              Login
+            </button>
+            <div className='edit-p'>
+            <p class="mt-4 ">
+          Não Possui uma conta? {' '}
+          <button class="">
+            <Link id='edit-link-regis' to="/registrar"> Registre-se Aqui</Link>
+          </button>
+        </p>
+        </div>
+        </form>
+        </div>
+        <div className='col-login4'>
+        <img alt='img' id='img-lg-mb' src={banner07}></img>
+        </div>
+      </div>
+    </div>
+    /*
     <div class="flex flex-row items-center justify-center h-screen bg-gray-100">
     
     <div class="w-edt">
@@ -108,6 +151,7 @@ const LoginPage = () => {
     </div>      
     
   </div>
+  */
   );
 };
 

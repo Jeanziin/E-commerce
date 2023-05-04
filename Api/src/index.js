@@ -13,7 +13,7 @@ const app = express()
 const server = http.createServer(app)
 const io = socketIO(server, {cors: {origin: 'http://localhost:3000'}})
 
-const dbUri = process.env.DB_URI.PORT || 3001;
+const dbUri = process.env.DB_URI;
 
 mongoose.connect(
   dbUri,

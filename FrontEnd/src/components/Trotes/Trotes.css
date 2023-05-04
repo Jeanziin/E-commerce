@@ -1,0 +1,116 @@
+.card-tr3{
+    background-color: #fac061;
+    background-image: linear-gradient(90deg, #fac061 0%, #ff6918 100%);
+    
+color: #ffffff;
+width: 330px;
+height: 180px;
+display: flex;
+align-items: center;
+justify-content: center;
+border-radius: 35px;
+box-shadow: 15px 15px 30px #acabab,
+           -15px -15px 30px #ffffff;
+
+}
+.card-tr2{
+    background: #00B4DB;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to right, #0083B0, #00B4DB);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to right, #0083B0, #00B4DB); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+color: #ffffff;
+width: 330px;
+height: 180px;
+display: flex;
+align-items: center;
+justify-content: center;
+border-radius: 35px;
+box-shadow: 15px 15px 30px #acabab,
+           -15px -15px 30px #ffffff;
+
+}
+.card-tr {
+    width: 330px;
+    height: 180px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 35px;
+    background: #232526;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #414345, #232526);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #414345, #232526); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    
+    color: #ffffff;
+    box-shadow: 15px 15px 30px #acabab,
+               -15px -15px 30px #ffffff;
+  }
+  .car-cont{
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    
+
+  }
+  .alig{
+    margin-top: 5rem;
+    margin-bottom: 5rem;
+  }
+  #edit-h2{
+    font-size: 15pt;
+    color: black;
+    border-bottom: 3px solid #008ECC;
+    max-width: 300px;
+    margin-bottom: 50px;
+  }
+  #edit-h2 span{
+    color: #008ECC;
+  }
+  .car-cont h6{
+    font-size: 16pt;
+    font-weight: 500;
+  }
+
+  #img-tr{
+    width: 140px;
+    margin-left: 7px;
+  }
+  #img-tr2{
+    width: 120px;
+    margin-left: 8px;
+  }
+  #img-tr:hover{
+    animation: myAnim 1s cubic-bezier(0.76, 0, 0.24, 1) 0s 1 alternate forwards;
+    background-color: transparent;
+  }
+  #img-tr2:hover{
+    animation: myAnim 1s cubic-bezier(0.76, 0, 0.24, 1) 0s 1 alternate forwards;
+    background-color: transparent;
+  }
+  @keyframes myAnim {
+	0% {
+		
+		transform: scale(1);
+	}
+
+	100% {
+		
+		transform: scale(1.1);
+	}
+}
+
+@media (max-width: 600px) {
+    .car-cont{
+        margin-top: 2rem;
+        margin-bottom: 2rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+    
+      }
+      .card-full{
+        margin-top: 20px;
+        margin-bottom: 20px;
+      }
+  }

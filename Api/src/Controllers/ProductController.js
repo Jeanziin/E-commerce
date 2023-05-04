@@ -3,7 +3,7 @@ const User = require('../Models/User')
 module.exports = {
     async create(req, res) {
         const dateUTC = new Date(Date.now()).toUTCString();
-        const { name, price, author, category, synopsis,year, dateUTC} = req.body
+        const { name, price, author, category, synopsis,year} = req.body
 
         const { user_id } = req.params
 

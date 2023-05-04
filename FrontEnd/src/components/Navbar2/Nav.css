@@ -11,9 +11,12 @@
   .icon{
     display: flex;
     align-items: center;
+    text-decoration: none;
+    color: #00a8ff;
   }
   .icon:hover{
-    color: #00a8ff;
+    color: #0480be;
+    text-decoration: none;
   }
   .icon-size .user-name{
     display: flex;
@@ -23,35 +26,81 @@
   .container-input {
     position: relative;
   }
-  #logout{
-    color: black;
-    margin-top: 2.5px;
-  }
-  #logout:hover{
-    color: #00a8ff;
-  }
+  
   .input-pesquisa {
-    width: 140px;
+    width: 180px;
     padding: 8px 0px 8px 35px;
     border-radius: 9999px;
     color: #333;
-    border: solid 1px #333;
+    border: solid 1px #00a8ff;
     transition: all .2s ease-in-out;
     outline: none;
     font-size: 10pt;
     opacity: 0.8;
   }
+  .input-pesquisa:hover{
+    border: solid 1px #00a8ff;
+  }
+  
+  #edit-tx-dr:hover{
+    text-decoration: none;
+  }
+  #link-edit-tx:hover{
+    text-decoration: none;
+  }
+  #link-edit-tx {
+    color: #000000;
+  }
   
   .container-input svg {
     position: absolute;
+    color: #00a8ff;
     top: 50%;
     left: 10px;
     transform: translate(0, -50%);
   }
-  
+  .input-pesquisa{
+    color: #000000;
+  }
   .input-pesquisa:focus {
     opacity: 1;
-    width: 250px;
+    width: 280px;
+    color: #000000;
+  }
+  .icon-size-drop{
+    font-size: 2rem;
+    display: flex;
+    align-items: center;
+
+  }
+  #dropdown-split-basic{
+    background: transparent;
+    color: #333;
+    border: none;
+
+  }
+  #btn-drop{
+    padding-left: -15px;
+    background-color: transparent;
+    color: #333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 12pt;
+    font-weight: 600;
+    border: none;
+    text-decoration: none;
+    width: 68px;
+    margin-top: 2px;
+    
+  }
+  #btn-drop:hover{
+    color: #000000;
+    text-decoration: none;
+    border: none;
+  }
+  .edit-user-name{
+    font-size: 12pt;
   }
   .btn_nav{
     margin: 0px, 20px, 0px, 50px;

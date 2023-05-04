@@ -1,5 +1,37 @@
 .cards{
   flex-wrap: wrap;
+  border-radius: 32px;
+}
+.my-carousel {
+  position: relative;
+}
+
+.carousel-control-prev,
+.carousel-control-next {
+  position: absolute;
+  top: -40px;
+  right: 0;
+  left: auto;
+  bottom: auto;
+
+
+}
+.carousel-control-prev {
+  margin-right: 15px;
+  font-size: 20pt;
+  text-decoration: none;
+}
+
+.carousel-control-next {
+  margin-left: 15px;
+  font-size: 20pt;
+  color: #00a8ff;
+}
+
+
+
+#slider-edit{
+  padding-bottom: 1rem;
 }
 #edit-h2{
   font-size: 15pt;

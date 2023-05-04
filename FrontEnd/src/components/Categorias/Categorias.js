@@ -37,31 +37,32 @@ function Categorias({setCategory}) {
   }
 
   return (
-    <div className="categories">
+    <div className="categories container">
+      <h2 id="edit-h2-cat"><span>Categorias</span></h2>
     <div className="container cont_edit">
       <div className="icons_cartegory text-center">
-        <AiFillHeart className='icon' onClick={updateRomance}/> <p>Romance</p>
+        <AiFillHeart className='icon-cart' onClick={updateRomance}/> <p>Romance</p>
       </div>
       <div className="icons_cartegory text-center">
-          <GiPistolGun className='icon' onClick={updateAction}/> <p>Ação</p>
+          <GiPistolGun className='icon-cart' onClick={updateAction}/> <p>Ação</p>
       </div>
       <div className="icons_cartegory text-center">
-        <GiMaterialsScience className='icon' onClick={updateFiction}/> <p>Ficção</p>
+        <GiMaterialsScience className='icon-cart' onClick={updateFiction}/> <p>Ficção</p>
       </div>
       <div className="icons_cartegory text-center">
-        <RiSpyFill onClick={updateSuspense} className='icon'/> <p>Suspense</p>
+        <RiSpyFill onClick={updateSuspense} className='icon-cart'/> <p>Suspense</p>
       </div>
       <div className="icons_cartegory text-center">
-        <MdHistoryToggleOff onClick={updateHistory} className='icon'/> <p>História</p>
+        <MdHistoryToggleOff onClick={updateHistory} className='icon-cart'/> <p>História</p>
       </div>
       <div className="icons_cartegory text-center">
-        <BsFillPersonBadgeFill onClick={updateBibiografia} className='icon'/> <p>Biografia</p>
+        <BsFillPersonBadgeFill onClick={updateBibiografia} className='icon-cart'/> <p>Biografia</p>
       </div>
       <div className="icons_cartegory text-center">
-        <GiScreaming className='icon' onClick={updateTerror} /> <p>Terror</p>
+        <GiScreaming className='icon-cart' onClick={updateTerror} /> <p>Terror</p>
       </div>
       <div className="icons_cartegory text-center">
-        <SiApachemaven className='icon' onClick={updateFantasy} /> <p>Fantasia</p>
+        <SiApachemaven className='icon-cart' onClick={updateFantasy} /> <p>Fantasia</p>
       </div>
     </div>
     </div>
