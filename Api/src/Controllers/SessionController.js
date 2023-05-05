@@ -1,8 +1,8 @@
 const User = require('../Models/User');
 const bcrypt  = require('bcrypt');
 
-module.exports = {
-    async create(req, res){
+
+    const create = async(req, res) => {
         const {email, password} = req.body;
 
 
@@ -28,4 +28,4 @@ module.exports = {
 
 
 
-}
+module.exports = create;

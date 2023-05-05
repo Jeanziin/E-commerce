@@ -38,6 +38,12 @@ const Schema = new mongoose.Schema({
     type: Number,
     required: true
   },
+  
+  dateLocal: {
+    type: String,
+    required: true
+  },
+
   src: {
     type: String,
     required: true

@@ -24,14 +24,14 @@ const upload = multer({ storage: storage });
 //User 
 routes.post('/user', UserController.create)
 routes.get('/user/', UserController.index)
-routes.delete('/user/:user_id', UserController.delete)
+routes.delete('/user/:user_id', UserController.deletedUser)
 routes.get('/user/:user_id', UserController.findUser) 
 routes.put('/user/:user_id', UserController.update);
 
 //Product 
 routes.post('/:user_id/product', upload.single('src'), ProductController.create)
 routes.put('/users/:user_id/products/:product_id',upload.single('src'), ProductController.update);
-routes.delete('/:user_id/product/:product_id', ProductController.delete)
+routes.delete('/:user_id/product/:product_id', ProductController.deletedProduct)
 routes.get('/product/cords', ProductController.indexCords)
 routes.get('/product', ProductController.indexAll)
 routes.get('/product/:user_id', ProductController.indexByUser)
@@ -41,7 +41,7 @@ routes.post('/session', SessionController.create)
 
 //PruductPj
 routes.post('/:user_id/productPj', upload.single('src'), ProductPjController.create)
-routes.delete('/:user_id/productPj/:productPj_id', ProductPjController.delete)
+routes.delete('/:user_id/productPj/:productPj_id', ProductPjController.deletedProductPj)
 routes.delete('/:user_id/productPj/:productPj_id', ProductPjController.update)
 routes.get('/productPj/cords', ProductPjController.indexCords)
 routes.get('/productPj', ProductPjController.indexAll)

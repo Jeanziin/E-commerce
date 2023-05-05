@@ -11,8 +11,8 @@ async function hashPassword(password) {
   }
 }
 
-module.exports = {
-  async create(req, res) {
+
+  const create = async (req, res) => {
     const { name, email, password, phone, latitude, longitude } = req.body
 
     const location = {
@@ -38,9 +38,9 @@ module.exports = {
     } catch (err) {
       return res.status(400).send(err)
     }
-  },
+  }
 
-  async delete(req, res) {
+  const deletedUser = async (req, res) => {
     const { user_id } = req.params
 
     const { auth } = req.headers
@@ -54,8 +54,8 @@ module.exports = {
     } catch (err) {
       return res.status(400).send(err)
     }
-  },
-  async findUser(req, res) {
+  }
+  const findUser = async(req, res) => {
     const { user_id } = req.params
 
     const { auth } = req.headers
@@ -66,17 +66,18 @@ module.exports = {
     } catch (err) {
       return res.status(400).send(err)
     }
-  },
-  async index(req, res) {
+  }
+
+  const index = async (req, res) => {
     try {
       const allUsers = await User.find()
       return res.status(200).send(allUsers)
     } catch (err) {
       return res.status(400).send(err)
     }
-  },
+  }
 
-  async update(req, res) {
+  const update = async(req, res) => {
     const { user_id } = req.params
     const { auth } = req.headers
     const { name, email, password, phone, latitude, longitude } = req.body
@@ -120,4 +121,12 @@ module.exports = {
       return res.status(400).send(err)
     }
   }
+
+
+module.exports = {
+  create,
+  deletedUser,
+  findUser,
+  index,
+  update
 }

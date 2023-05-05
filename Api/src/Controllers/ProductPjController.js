@@ -1,8 +1,8 @@
 const ProductPj = require('../Models/ProductPj')
 const User = require('../Models/User')
-module.exports = {
-    async create(req, res) {
-        const { name, price, author, category, synopsis,year } = req.body
+
+     const create = async(req, res) => {
+        const { name, price, author, category, synopsis,year, dateLocal = new Date(dateUTC).toLocaleString('pt-BR', { timeZone: 'UTC' })} = req.body
 
         const { user_id } = req.params
 
@@ -24,7 +24,7 @@ module.exports = {
                 coordinates: [longitude, latitude]
             }
 
-            const createdProductPj = await ProductPj.create({name, price, user: user_id, location: setLocation, author, category, synopsis, year,  src: req.file.path })
+            const createdProductPj = await ProductPj.create({name, price, user: user_id, location: setLocation, author, category, synopsis, year,  src: req.file.path, dateLocal})
             const populatedProductPj = await ProductPj.findById(createdProductPj._id).populate('user')
            
 
@@ -33,9 +33,9 @@ module.exports = {
             console.log('foi aqui')
             return res.status(400).send(err)
         }
-    },
+    }
 
-    async delete(req, res){
+   const deletedProductPj = async(req, res) => {
         
 
         const { productPj_id, user_id} = req.params 
@@ -52,8 +52,9 @@ module.exports = {
         }catch (err){
             return res.status(400).send(err)
         }
-    },
-    async indexByUser(req, res){
+    }
+   
+    const indexByUser = async(req, res) =>{
         const { user_id }= req.params
 
         try{
@@ -62,8 +63,9 @@ module.exports = {
         }catch(err){
         return res.status(400).send(err)
         }
-    },
-    async indexCords(req, res){
+    }
+
+   const indexCords  = async(req, res) => {
         const { latitude, longitude  } = req.query
         const maxDistance = 10000
 
@@ -85,9 +87,9 @@ module.exports = {
     catch (err){
         return res.sendStatus(400).send(err)
     }
-    },
+    }
 
-    async indexAll(req, res){
+    const indexAll = async(req, res) => {
         
     try{
         const allProducts = await ProductPj.find({
@@ -98,9 +100,9 @@ module.exports = {
     catch (err){
         return res.sendStatus(400).send(err)
     }
-    },
+    }
 
-    async indexProd(req, res){
+    const indexProd = async(req, res) => {
         const {product_id }= req.params
 
         try{
@@ -109,9 +111,9 @@ module.exports = {
         }catch(err){
         return res.status(400).send(err)
         }
-    },
+    }
 
-    async update(req, res) {
+   const update =  async(req, res) => {
         const { name, price, author, category, synopsis, year } = req.body;
         const { user_id, productPj_id } = req.params;
         const { auth } = req.headers;
@@ -152,4 +154,15 @@ module.exports = {
           return res.status(400).send({ message: 'Erro ao atualizar o produto' });
         }
       }
+
+
+module.exports = {
+    create,
+    deletedProductPj,
+    indexByUser,
+    indexCords,
+    indexAll,
+    indexProd,
+    update
+
 }
