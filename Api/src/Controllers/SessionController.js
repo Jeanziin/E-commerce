@@ -28,4 +28,4 @@ const bcrypt  = require('bcrypt');
 
 
 
-module.exports = create;
+module.exports = { create };
