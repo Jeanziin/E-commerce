@@ -39,6 +39,7 @@ function MyAnnuncements() {
       </div>
       <Footer/>
       </div>
+      
   )
 }
 

@@ -34,37 +34,38 @@ const MyCards = ({name, price, synopsis, _id, src}) => {
   }
 
   return (
+  
     <div className={` cards container d-flex`}>
       
       <div>
         
       <div className={`${styles.cardinho} `}>
-      <div>
-        <Dropdown className={`${styles.drops} z-3`} title="" renderToggle={renderIconButton}>
-          
-                <Dropdown.Item icon={<TrashIcon />}onClick={deleteProduct}>
-                </Dropdown.Item>
-                <Link to={`/editar_produto/${_id}`}>
-                  <Dropdown.Item icon={<EditIcon/>} >
-                  </Dropdown.Item>
-                </Link>
-                
-            </Dropdown>
-        </div>
+     
         <img
           src={`http://localhost:3333/${src}`}
           alt="Denim Jeans"
         ></img>
-        <h1>{name}</h1>
-        <p className="price">R$ {price}</p>
-        <p>{synopsis}</p>
-        
+        <div className={`${styles.continfos} `}>
+        <h1>Tiulo:{name}</h1>
+        <p className="price">Preço R${price}</p>
+        <p>Sinopse:{synopsis}</p>
+        </div>
+        <Dropdown className={`${styles.drops} z-3`} title="" renderToggle={renderIconButton}>
+          
+          <Dropdown.Item icon={<TrashIcon />}onClick={deleteProduct}>
+          </Dropdown.Item>
+          <Link to={`/editar_produto/${_id}`}>
+            <Dropdown.Item icon={<EditIcon/>} >
+            </Dropdown.Item>
+          </Link>
+          
+      </Dropdown>
       </div>
         
       </div>
       
     </div>
-
+   
   )
 }
 

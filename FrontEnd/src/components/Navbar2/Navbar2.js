@@ -124,7 +124,11 @@ function Navbar2({ setSearchProducts }) {
                                             {userData.isLogged ? (
                                                 <p className="edit-user-name">
                                                     {' '}
-                                                    {` ${userData.name}`}{' '}
+                                                    {` ${
+                                                        userData.name.split(
+                                                            ' '
+                                                        )[0]
+                                                    }`}{' '}
                                                 </p>
                                             ) : null}{' '}
                                         </Button>

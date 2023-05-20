@@ -2,7 +2,7 @@ const Product = require('../Models/Product')
 const User = require('../Models/User')
 
     const create = async (req, res) => {
-        const { name, price, author, category, synopsis,year,  dateLocal = new Date(dateUTC).toLocaleString('pt-BR', { timeZone: 'UTC' })} = req.body
+        const { name, price, author, category, synopsis, year, state } = req.body
 
         const { user_id } = req.params
 
@@ -24,7 +24,7 @@ const User = require('../Models/User')
                 coordinates: [longitude, latitude]
             }
 
-            const createdProduct = await Product.create({name, price, user: user_id, location: setLocation, author, category, synopsis, year,  src: req.file.path, dateLocal})
+            const createdProduct = await Product.create({name, price, user: user_id, location: setLocation, author, category, synopsis, year,  src: req.file.path,  state })
             const populatedProduct = await Product.findById(createdProduct._id).populate('user')
            
 

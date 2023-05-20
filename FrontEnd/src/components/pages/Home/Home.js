@@ -142,20 +142,30 @@ const Home = () => {
                                 Livros <span>Usados</span>
                             </h2>
                             <h2>{category}</h2>
-
-                            <Slider slidesToShow={5}>
-                                {CategoredProducts.map(product => (
-                                    <Cards
-                                        key={product._id}
-                                        _id={product._id}
-                                        name={product.name}
-                                        src={product.src}
-                                        author={product.author}
-                                        price={product.price}
-                                        synopsis={product.synopsis}
-                                    />
-                                ))}
-                            </Slider>
+                            
+                            <Carousel className="my-carousel" prevIcon={<FcPrevious />} nextIcon={<FcNext />}>
+  {CategoredProducts.reduce((rows, product, index) => {
+    if (index % 5 === 0) rows.push([]);
+    rows[rows.length - 1].push(product);
+    return rows;
+  }, []).map((row, rowIndex) => (
+    <Carousel.Item key={rowIndex}>
+      <div className="cards text-center d-flex">
+        {row.map((product) => (
+          <Cards
+            key={product._id}
+            _id={product._id}
+            name={product.name}
+            src={product.src}
+            author={product.author}
+            price={product.price}
+            synopsis={product.synopsis}
+          />
+        ))}
+      </div>
+    </Carousel.Item>
+  ))}
+</Carousel>
                         </div>
 
                         <Trotes />
@@ -164,7 +174,7 @@ const Home = () => {
                                 Veja os Livros Próximos a <span>Você</span>
                             </h2>
 
-                            <div className="cards text-center d-flex">
+                            <div className="cards  d-flex">
                                 {productsData.map(product => (
                                     <Cards
                                         key={product._id}
@@ -177,7 +187,7 @@ const Home = () => {
                                     />
                                 ))}
                             </div>
-                            <div className="text-center link_map">
+                            <div className=" link_map">
                                 {userData.isLogged ? (
                                     <Link id="link-tx" to="/map_products">
                                         <button className="btn_map link_map">

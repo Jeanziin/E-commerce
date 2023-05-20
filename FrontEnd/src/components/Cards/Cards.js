@@ -26,7 +26,33 @@ function Cards({
         setHovered(false)
     }
 
-    return (
+    return ( 
+
+     
+        <div className="product-card">
+        
+        <div className="product-tumb">
+        <img
+                src={`https://swap-backend.onrender.com/${src}`}
+                id="img-card"
+                alt="Denim Jeans"
+            />
+        </div>
+        <div className="product-details">
+          <span className="product-catagory">Por <span id='author-edit'>{author}</span></span>
+          <h6><a href="">{name}</a></h6>
+          <div className="product-bottom-details">
+            <div className="product-price">R${price}</div>
+            <div className="product-links">
+              <a href=""> <AiOutlineShopping id="icon-info" /></a>
+              <a href=""><MdFavoriteBorder id="icon-info" /></a>              
+              <a href={`/details/${_id}`}> <AiOutlineInfoCircle id="icon-info" /></a>
+            </div>
+          </div>
+        </div>
+      </div>
+   
+        /*
         <div
             className="card"
             onMouseEnter={handleMouseEnter}
@@ -68,6 +94,7 @@ function Cards({
                 </div>
             </div>
         </div>
+        */
     )
 }
 

@@ -185,7 +185,7 @@ const UpdateBook = () => {
           </div>
         </form>
       </section>
-      <Navbar2/>
+      <Footer/>
     </>
   );
 };

@@ -118,15 +118,7 @@ box-shadow:  33px 33px 89px #777777,
     align-items: center;
     justify-content: center;
    }
-   #edit-link-regis{
-    font-size: 11pt;
-    color: #d0cece;
-    text-decoration: none;
-   }
-   #edit-link-regis:hover{
-    text-decoration: none;
-    color: #0093E9;
-   }
+ 
    .button-name:focus {
     box-shadow: #D6D6E7 0 0 0 1.5px inset, rgba(45, 35, 66, 0.4) 0 2px 4px, rgba(45, 35, 66, 0.3) 0 7px 13px -3px, #D6D6E7 0 -3px 0 inset;
    }
@@ -135,6 +127,10 @@ box-shadow:  33px 33px 89px #777777,
     box-shadow: rgba(45, 35, 66, 0.3) 0 4px 8px, rgba(45, 35, 66, 0.2) 0 7px 13px -3px, #D6D6E7 0 -3px 0 inset;
     transform: translateY(-2px);
    }
+   #img-lg-mb{
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+}
    
    .button-name:active {
     box-shadow: #D6D6E7 0 3px 7px inset;
@@ -151,4 +147,13 @@ box-shadow:  33px 33px 89px #777777,
         margin-top: 10rem;
     }
     
+  }
+  .isis{
+    text-decoration: none;
+    color: #f2f2f2;
+
+  }
+  .isis:hover{
+    color: #fff;
+    text-decoration: none;
   }

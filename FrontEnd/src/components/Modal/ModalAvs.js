@@ -55,6 +55,19 @@ function ModalAvs() {
         </div>
       </div>
     </div>
+    <br/>
+    <h6>Estado de conservação do Livro</h6>
+    <p>Novo:</p> um livro novo é aquele que nunca foi lido ou utilizado, e está em perfeito estado de conservação.
+    <br/>
+    <p>Como novo:</p> um livro como novo é aquele que parece ter sido pouco utilizado, mas pode apresentar leves sinais de desgaste ou envelhecimento, como pequenas manchas na capa ou nas páginas.
+    <br/>
+    <p>Muito bom:</p> um livro em muito bom estado de conservação pode apresentar alguns sinais de uso, como marcas de dobras na capa ou pequenas manchas nas bordas das páginas, mas geralmente está em boas condições.
+    <br/>
+    <p>Bom:</p> um livro em bom estado de conservação pode apresentar sinais mais evidentes de uso, como rasgos ou manchas na capa, e pode estar um pouco desgastado, mas ainda é legível e pode ser utilizado.
+    <br/>
+    <p>Regular:</p> um livro em estado regular de conservação pode apresentar vários sinais de desgaste, como manchas, rasgos, dobras ou páginas soltas, mas ainda é legível e pode ser utilizado.
+    <br/>
+    <p>Ruim:</p> um livro em estado ruim de conservação apresenta graves sinais de desgaste, como páginas faltando, rasgos grandes ou manchas que afetam a legibilidade, e pode precisar de reparos ou restauração para ser utilizado novamente.
         </Modal.Body>
         <Modal.Footer>
           <Button variant="primary" onClick={() => setShowModal(false)}>

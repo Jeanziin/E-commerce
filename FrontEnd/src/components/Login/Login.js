@@ -67,7 +67,7 @@ const LoginPage = () => {
            
             <div class="inputbox">
     <input required="required"  onChange={e=>setPassword(e.target.value)}
-              value={password} type="text"></input>
+              value={password} type="password"></input>
     <span>Senha</span>
     <i></i>
     </div>
@@ -83,9 +83,9 @@ const LoginPage = () => {
             <div className='edit-p'>
             <p class="mt-4 ">
           Não Possui uma conta? {' '}
-          <button class="">
-            <Link id='edit-link-regis' to="/registrar"> Registre-se Aqui</Link>
-          </button>
+         
+            <Link className='isis' to="/registrar"> Registre-se Aqui</Link>
+       
         </p>
         </div>
         </form>

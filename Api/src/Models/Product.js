@@ -38,13 +38,11 @@ const Schema = new mongoose.Schema({
     type: Number,
     required: true
   },
-  
-  dateLocal: {
+  src: {
     type: String,
     required: true
   },
-
-  src: {
+  state: {
     type: String,
     required: true
   }

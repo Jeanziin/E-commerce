@@ -15,6 +15,11 @@ box-shadow:  33px 33px 89px #777777,
     align-items: center;
   
 }
+.etr-edit{
+  text-decoration: none;
+  color: #d0cece;
+  margin-left: 2px;
+}
 .col-login3{
     display: flex;
     justify-content: center;

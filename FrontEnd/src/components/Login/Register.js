@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { UserContext } from "../UseContext/UserContext";
+import TextMask from 'react-text-mask';
 import api from '../../Services/Api.js';
 import { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
@@ -15,6 +16,10 @@ const RegisterPage = () => {
   const [latitude, setLatitude] = useState(0)
   const [longitude, setLongitude] = useState(0)
   const navigate = useNavigate()
+
+
+  const phoneMask = ['(', /\d/, /\d/, ')', ' ', /\d/, /\d/, /\d/, /\d/, '-', /\d/, /\d/, /\d/, /\d/];
+
   useEffect(()=> {
     getUserLocation()
   }, [])
@@ -48,6 +53,8 @@ const RegisterPage = () => {
       console.log(err)
     }, {timeout: 10000})
   }
+  
+  
 
 
 
@@ -89,18 +96,19 @@ const RegisterPage = () => {
               <span>Email</span>
             <i></i>
          </div>
-         <div class="inputbox">
-         <input
-                  type="text"
-                  value={phone}
-                  id="telefone"
-                  onChange={e => setPhone(e.target.value)}
-                  name="telefone"
-                  required
-/>
-              <span>Telefone</span>
-            <i></i>
-         </div>
+         <div className="inputbox">
+      <TextMask
+        type="text"
+        value={phone}
+        id="telefone"
+        onChange={(e) => setPhone(e.target.value)}
+        name="telefone"
+        mask={phoneMask}
+        required
+      />
+      <span>Telefone</span>
+      <i></i>
+    </div>
          <div class="inputbox">
          <input
               type="password"
@@ -121,6 +129,13 @@ const RegisterPage = () => {
           >
             Registrar
           </button>
+          <p className="text-center mt-2  edit-p text-white-600">
+        Já Possui uma conta?{' '}
+        <button  >
+          <Link className="etr-edit" to="/login">Entre aqui</Link>
+        </button>
+      </p>
+      
     <div className='edit-p'>
       </div>
       </form>
