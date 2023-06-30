@@ -1,0 +1,6 @@
+.buttonForm{
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    width: 70px; /* Defina a largura desejada para o título */
+}

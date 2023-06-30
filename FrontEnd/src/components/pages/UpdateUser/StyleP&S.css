@@ -1,0 +1,34 @@
+.itens-dados-up-2{
+    background-color: #fff;
+    padding: 20px;
+   
+    margin-top: 20px;
+    border-radius: 10px;
+
+    box-shadow:  5px 5px 19px #cecece,
+    -5px -5px 19px #f2f2f2;
+}
+.cont-PeS{
+display: flex;
+align-items: center;
+}
+.cont-tx-PeS{ 
+
+}
+#icon-PeS{
+    font-size: 25pt;
+    font-weight: bold;
+    margin-top: 25px;
+    margin-bottom: 25px;
+    color: rgb(15, 182, 15);
+    
+}
+.tx-PeS{
+    font-size: 15px;
+    font-weight: 200;
+}
+.btn-SeP{
+    color: #1d96e6;
+    margin-top: 3px;
+    font-weight: 600;
+}

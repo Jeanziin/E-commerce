@@ -1,123 +1,122 @@
-import '../Cards/cardsStyle.css'
-import { Link } from 'react-router-dom'
-import { useState } from 'react'
-import { AiOutlineHeart, AiFillHeart } from 'react-icons/ai'
-import { AiOutlineInfoCircle, AiOutlineShopping } from 'react-icons/ai'
-import { MdFavoriteBorder } from 'react-icons/md'
+import React, { useState, useContext, useEffect } from 'react';
+import { UserContext } from '../UseContext/UserContext';
+import { AiOutlineHeart, AiFillHeart } from 'react-icons/ai';
+import { MdOutlineSwapHorizontalCircle } from 'react-icons/md';
+import { AiOutlineInfoCircle, AiOutlineShopping } from 'react-icons/ai';
+import { MdFavoriteBorder } from 'react-icons/md';
+import api from '../../Services/Api.js';
+import ModalTrocaTrue from "../Modal/ModalTrocaTrue"
+import './cardsStyle.css';
 
-import './cardsStyle.css'
+function Cards({ src, name, author, price, _id, obj, allowTrade }) {
+  const [cart, setCart] = useState([]);
+  const [userData] = useContext(UserContext);
+  const [favorite, setFavorite] = useState(false); 
 
-function Cards({
-    src,
-    name,
-    author,
-    price,
-    _id,
-    isFavorite,
-    handleFavoriteClick
-}) {
-    const [hovered, setHovered] = useState(false)
+  useEffect(() => {
+    const favorites = JSON.parse(localStorage.getItem('favorites')) || [];
+    const isFavorite = favorites.some((fav) => fav._id === _id);
 
-    function handleMouseEnter() {
-        setHovered(true)
+    setFavorite(isFavorite); 
+  }, []);
+
+  async function handleClick() {
+    try {
+      const userId = getUserId();
+      const productId = _id;
+
+      if (favorite) {
+        await removeFavorite(userId, productId);
+      } else {
+        await addFavorite(userId, productId);
+      }
+
+      setFavorite(!favorite); 
+
+      updateFavoritesStorage(productId);
+    } catch (error) {
+      console.log(error);
+    }
+  }
+
+  async function addFavorite(userId, productId) {
+    try {
+      const response = await api.post(`/user/${userId}/favorites/${productId}`);
+      console.log(response.data.message);
+    } catch (error) {
+      console.log(error);
+    }
+  }
+
+  async function removeFavorite(userId, productId) {
+    try {
+      const response = await api.delete(`/user/${userId}/favorites/${productId}`);
+      console.log(response.data.message);
+    } catch (error) {
+      console.log(error);
+    }
+  }
+
+  function getUserId() {
+    if (userData && userData._id) {
+      return userData._id;
+    }
+    return null;
+  }
+
+  function updateFavoritesStorage(productId) {
+    const favorites = JSON.parse(localStorage.getItem('favorites')) || [];
+
+    const updatedFavorites = favorites.filter((fav) => fav._id !== productId);
+
+    if (!favorite) {
+      const product = obj;
+      updatedFavorites.push(product)
     }
 
-    function handleMouseLeave() {
-        setHovered(false)
-    }
+    localStorage.setItem('favorites', JSON.stringify(updatedFavorites));
+  }
 
-    return ( 
-
-     
-        <div className="product-card">
-        
-        <div className="product-tumb">
-        <img
-                src={`https://swap-backend.onrender.com/${src}`}
-                id="img-card"
-                alt="Denim Jeans"
-            />
+  return (
+    <div className="product-card">
+      <div className="product-tumb">
+        <img src={`${process.env.REACT_APP_API}/${src}`} id="img-card" alt="Denim Jeans" />
+      </div>
+      {allowTrade && (
+        <div className="icon-container2">
+          <i className="fas fa-thumbs-up">
+            <ModalTrocaTrue/>
+          </i>
         </div>
-        <div className="product-details">
-          <span className="product-catagory">Por <span id='author-edit'>{author}</span></span>
-          <h6><a href="">{name}</a></h6>
-          <div className="product-bottom-details">
-            <div className="product-price">R${price}</div>
-            <div className="product-links">
-              <a href=""> <AiOutlineShopping id="icon-info" /></a>
-              <a href=""><MdFavoriteBorder id="icon-info" /></a>              
-              <a href={`/details/${_id}`}> <AiOutlineInfoCircle id="icon-info" /></a>
-            </div>
+      )}
+      <div className="product-details">
+        <span className="product-catagory">
+          Por <span id="author-edit">{author}</span>
+        </span>
+        <h6>
+          <a href="">{name}</a>
+        </h6>
+        <div className="product-bottom-details">
+          <div className="product-price">R${price}</div>
+          <div className="product-links">
+            <a href={`/chat/${_id}`}>
+              {' '}
+              <AiOutlineShopping id="icon-info" />
+            </a>
+            {userData.isLogged && (
+              <button className="fs-5" onClick={handleClick}>
+                {favorite ? <AiFillHeart id='icon-fav-1' /> : <MdFavoriteBorder id="icon-fav-2" />}
+              </button>
+            )}
+            <a href={`/details/${_id}`}>
+              {' '}
+              <AiOutlineInfoCircle id="icon-info" />
+            </a>
           </div>
         </div>
       </div>
-   
-        /*
-        <div
-            className="card"
-            onMouseEnter={handleMouseEnter}
-            onMouseLeave={handleMouseLeave}
-        >
-            <img
-                src={`http://localhost:3333/${src}`}
-                id="img-card"
-                alt="Denim Jeans"
-            />
-            <div className="col-text-et container">
-                <span class="card__category">R${price},00</span>
-                <h6 class="card__title">{name}</h6>
-                <span class="card__by">
-                    by{' '}
-                    <a href="#" class="card__author" title="author">
-                        {author}
-                    </a>
-                </span>
-            </div>
-            <div className="col-master">
-                <div className={`btn-group ${hovered ? 'show' : ''}`}>
-                    <p className="details-edit">
-                        <a id="details-edit" href={`/details/${_id}`}>
-                            <AiOutlineInfoCircle id="icon-info" />
-                        </a>
-                    </p>
-                    <p>
-                        <AiOutlineShopping id="icon-info" />
-                    </p>
-                    <p>
-                        <button
-                            className="btn-favorite"
-                            onClick={handleFavoriteClick}
-                        >
-                            <MdFavoriteBorder id="icon-info" />
-                        </button>
-                    </p>
-                </div>
-            </div>
-        </div>
-        */
-    )
+    </div>
+  );
 }
 
-export default Cards
-
-/*
-<div class="card">
-<form control="" class="form-group">
-            <div class="row">
-              <input type="text" name="username" id="username" class="form__input" placeholder="Username"></input>
-            </div>
-            <div class="row">
-            
-              <input type="password" name="password" id="password" class="form__input" placeholder="Password"></input>
-            </div>
-            <div class="row">
-              <input type="checkbox" name="remember_me" id="remember_me" class=""></input>
-              <label for="remember_me">Remember Me!</label>
-            </div>
-            <div class="row">
-              <input type="submit" value="Submit" class="btn-op"></input>
-            </div>
-          </form>
-<img src={imgBook}></img>
-</div>
-*/
+export default Cards;

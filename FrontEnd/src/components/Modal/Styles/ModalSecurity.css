@@ -1,0 +1,32 @@
+/* ModalSecurity.css */
+  
+  .modal-content {
+    border-radius: 10px;
+  }
+  
+  .modal-header {
+    background-color: #e6e5e5;
+    color: #010101;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+  }
+  
+  .modal-title {
+    font-weight: bold;
+  }
+  
+  .modal-body {
+    margin-bottom: 30px;
+  }
+  
+  .modal-footer {
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+  }
+  
+  @media (max-width: 576px) {
+    .modal-dialog {
+      margin: 0.5rem;
+    }
+  }
+  

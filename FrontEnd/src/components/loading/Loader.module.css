@@ -1,0 +1,12 @@
+.loader{
+    width: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.loading img{
+    width: 100px;
+    mix-blend-mode: color-burn;
+
+}

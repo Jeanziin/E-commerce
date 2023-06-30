@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import '../Trotes/Trotes.css'
 import '../Cards/cardsStyle.css'
 import imge from '../img/harry.png'
@@ -7,14 +7,18 @@ import imge3 from '../img/got.png'
 import { Link } from 'react-router-dom'
 import { useState } from 'react';
 import { AiOutlineHeart, AiFillHeart  } from 'react-icons/ai'
+import AOS from 'aos';
 import {AiOutlineInfoCircle} from'react-icons/ai'
 import {MdOutlineDiscount
 } from'react-icons/md'
+import 'aos/dist/aos.css';
+
 
 
 const BookContainer = (name, price, src) => {
+
   return (
-<div className='container alig'>
+<div data-aos="fade-up" className='container alig'>
 <h2 id="edit-h2">Melhores <span>Ofertas</span></h2>
 <div className='car-cont'>
 <div class="card-tr card-full">

@@ -1,56 +1,129 @@
-@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,700;0,900;1,300;1,400&display=swap');
-.edit-car{
-width: 900px;
-height: 350px;
-background-color: #05abf3;
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,500;0,600;1,200;1,600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100;0,300;0,400;0,600;1,100;1,200;1,400;1,700&display=swap');
+
+.edit-car {
+  position: relative;
+  width: 900px;
+  height: 350px;
+  background-color: #05abf3;
 background-image: linear-gradient(to right, #02b2ff 0%, #05abf3 50%, #008ecc 100%);
-box-shadow: 15px 15px 30px #bebebe,
--15px -15px 30px #ffffff;
-transition: 1s;
-background-image: url('../img/fundo.png');
-border-radius: 35px;
-display: flex;
-align-items: center;
-justify-content: center;
-margin-bottom: 5rem;
+ 
+  box-shadow: 15px 15px 30px #bebebe, -15px -15px 30px #ffffff;
+  transition: 1s;
+  background-image: url('../img/fundoteste.png');
+  border-radius: 35px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 5rem;
+  margin-top: 8rem;
+  overflow: hidden;
 }
+
 .edit-car:hover{
-background-color: #039dde;
+    background-color: #039dde;
+        transition: 1s;
+        transition-delay: 0.3s; 
+    }
+#edit-from-h1 {
+    font-family: 'Montserrat', sans-serif;
+  font-size: 60pt;
+  margin-top: 20px;
+  margin-bottom: 20px;
+ 
+}
+
+.col-t2 {
+  color: #fff;
+  align-items: center;
+  margin-right: 30px;
+}
+
+
+
+#h5 {
+    font-family: 'Raleway', sans-serif;
+  font-size: 12pt;
+  font-weight: 300;
+}
+
+.img-banner {
+  width: 300px;
+  animation: slide-in 1s ease-in-out alternate;
+}
+
+@keyframes slide-in {
+  0% {
+    transform: translateX(-50px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes background-color-animation {
+  0% {
+    background-color: #05abf3;
+  }
+  15% {
+    background-color: #1ca1da;
+  }
+  25% {
+    background-color: #17a3e0;
+  }
+  50% {
+    background-color: #1097d2;
+  }  
+  75% {
+    background-color: #119ad5;
+  }
+  100% {
+    background-color: #1da7e2;
+  }
+}
+
+.col-t1 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.col-t3 {
+  align-items: center;
+}
+
+@media (max-width: 680px) {
+  #edit-from-h1 {
+    font-family: 'Poppins', sans-serif;
+    font-size: 20pt;
+    margin-top: 4px;
+    margin-bottom: 4px;
+  }
+
+  h6 {
+    font-size: 10pt;
+  }
+
+  h5 {
+    font-size: 12pt;
+  }
+
+  .edit-car {
+    width: 900px;
+    height: 350px;
+    background-color: #05abf3;
+    background-image: linear-gradient(to right, #02b2ff 0%, #05abf3 50%, #008ecc 100%);
+    box-shadow: 15px 15px 30px #bebebe, -15px -15px 30px #ffffff;
     transition: 1s;
-    transition-delay: 0.3s; 
-}
-#edit-from-h1{
-    font-family: 'Lato', sans-serif;
-    font-size: 50pt;
-    margin-top: 20px;
-    margin-bottom: 20px ;
-}
-.img-banner{
-    width: 300px;
-}
-.col-t1{
+    background-image: url('../img/fundo3.png');
+    border-radius: 35px;
     display: flex;
     align-items: center;
     justify-content: center;
-    
-}
-.col-t2{
-color: #fff;
-align-items: center;
-}
-.col-t3{
-
-align-items: center;
-}
-@media (max-width: 600px) {
-    #edit-from-h1{
-        font-family: 'Lato', sans-serif;
-        font-size: 20pt;
-        margin-top: 4px;
-        margin-bottom: 4px ;
-    }
-    .col-t2, h6, h5{
-        font-size: 5pt;
-    }
-    
+    margin-bottom: 5rem;
+    margin-top: 8rem;
   }
+}

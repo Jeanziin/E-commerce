@@ -1,0 +1,273 @@
+@import url("../UpdateUser/StyleP&S.css");
+
+.container-up-2 {
+  background-color: #fff;
+  padding: 20px;
+  margin-top: 20px;
+  border-radius: 10px;
+  box-shadow: 5px 5px 19px #cecece, -5px -5px 19px #f2f2f2;
+  height: 110px;
+}
+
+#tx-def {
+  margin-top: 10px;
+  font-weight: 100;
+  color: #a3a3a3;
+}
+
+.btn-def {
+  color: #1d96e6;
+  font-weight: 600;
+  font-size: 11pt;
+}
+
+.cont-itens-2 {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  
+}
+
+.cont-itens-icon {
+  display: flex;
+  justify-content: end;
+}
+
+.text-icon-cont {
+  display: flex;
+  align-items: center;
+}
+
+#icon-Def {
+  color: red;
+  font-size: 16pt;
+  margin-right: 5px;
+}
+
+.container-Up {
+  display: flex;
+  width: 1000px;
+  margin-top: 8rem;
+}
+
+.btn-icon {
+  display: flex;
+  align-self: center;
+}
+
+.itens2-up {
+  margin-top: 25px;
+}
+
+#icon-up {
+  font-size: 22pt;
+  display: flex;
+  align-items: center;
+  margin-right: 20px;
+}
+
+.botoes-Up {
+  flex-direction: column;
+}
+
+.conteudo-Up {
+  flex-grow: 1;
+  margin-left: 20px;
+}
+
+.botaoAtivo {
+  background-color: #fff;
+  width: 280px;
+  color: #1d96e6;
+}
+
+#btn-Up {
+  font-size: 15pt;
+  margin-bottom: 18px;
+  display: flex;
+  align-self: center;
+  background-color: #f2f2f2;
+}
+
+.tx-up {
+  font-size: 30pt;
+  font-weight: 200;
+}
+
+.tx-p-up {
+  margin-top: 15px;
+  color: #c6c4c4;
+}
+
+.itens-dados-up {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  margin-top: 20px;
+  box-shadow: 5px 5px 19px #cecece, -5px -5px 19px #f2f2f2;
+}
+
+.itens-dados-up h6 {
+  margin-bottom: 22px;
+  font-size: 20pt;
+  color: #464646;
+}
+
+.input-up {
+  height: 45px;
+  width: 100%;
+  border-radius: 10px;
+  border: 1px solid #d2d2d2;
+  margin-bottom: 25px;
+  margin-top: 5px;
+  font-size: 16px;
+  font-weight: 600;
+  padding-left: 10px;
+}
+
+.input-up:focus {
+  border: 2px solid #1d96e6;
+  border-color: #1d96e6;
+  outline: none;
+}
+
+#pr-up {
+  font-size: 13pt;
+}
+
+.radio-up {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  width: 18px;
+  height: 18px;
+  border: 1px solid #464646;
+  border-radius: 50%;
+  margin-right: 5px;
+  vertical-align: middle;
+}
+
+.radio-up:checked {
+  background-color: #1d96e6;
+  border: 1px solid #d2d2d2;
+}
+
+.radio-div {
+  display: flex;
+  justify-content: space-around;
+}
+
+#tp-up {
+  color: #3a3a3a;
+  font-weight: 800;
+  font-size: 12pt;
+  margin-bottom: 30px;
+  margin-top: 22px;
+}
+
+#sp-up {
+  font-weight: 100;
+  margin-left: 5px;
+  font-size: 10pt;
+}
+
+#tm-lb {
+  font-weight: 600;
+  font-size: 11pt;
+}
+
+.btn-up {
+  padding: 1em 2em;
+  border: none;
+  border-radius: 5px;
+  font-weight: bold;
+  letter-spacing: 5px;
+  text-transform: uppercase;
+  color: #2c9caf;
+  transition: all 1000ms;
+  font-size: 11px;
+  position: relative;
+  overflow: hidden;
+  outline: 2px solid #2c9caf;
+  margin-bottom: 15px;
+}
+
+.btn-up:hover {
+  color: #ffffff;
+  transform: scale(1.1);
+  outline: 2px solid #70bdca;
+  box-shadow: 4px 5px 17px -4px #268391;
+}
+
+.btn-up::before {
+  content: "";
+  position: absolute;
+  left: -50px;
+  top: 0;
+  width: 0;
+  height: 100%;
+  background-color: #2c9caf;
+  transform: skewX(45deg);
+  z-index: -1;
+  transition: width 1000ms;
+}
+
+.btn-up:hover::before {
+  width: 250%;
+}
+
+/* Adicionar regras @media para responsividade */
+
+@media screen and (max-width: 768px) {
+  .container-Up {
+    width: 100%;
+    margin-top: 4rem;
+    flex-direction: column;
+  }
+
+  .btn-icon {
+    justify-content: center;
+  }
+
+  .botoes-Up {
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin-top: 2rem;
+  }
+
+  .conteudo-Up {
+    margin-left: 0;
+    margin-top: 2rem;
+  }
+
+  .botaoAtivo {
+    width: auto;
+  }
+
+  .btn-up {
+    width: 100%;
+  }
+
+  .tx-up {
+    font-size: 24pt;
+  }
+}
+
+#icon-assim{
+  color: red;
+  font-size: 50pt;
+}
+.assim-edit{
+  display: flex;
+  justify-content: center;
+  padding: 10px;
+  align-items: center;
+  
+}
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  background-color: #f2f2f2;
+}

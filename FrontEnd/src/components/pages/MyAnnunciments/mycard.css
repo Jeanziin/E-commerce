@@ -1,0 +1,306 @@
+.card-icon{
+  color: #2586af;
+}
+#icon-delete{
+  color: #2586af;
+}
+.card-anum {
+  position: relative;
+  display: flex;
+  background-color: #ffffff;
+  align-items: center;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  overflow: hidden;
+  width: 520px;
+  height: 420px;
+  margin: 20px;
+  border: 1px solid #ccc;
+}
+
+.book-image {
+  width: 160px;
+  object-fit: cover;
+  height: 100%;
+}
+
+.card-content {
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  align-items: center;
+}
+
+.book-title { 
+   font-weight: 800;
+  display: block;
+  text-align: left;
+  margin-bottom: 18px;
+  color: #000000;
+  text-decoration: none;
+  transition: 0.3s;
+  max-height: 3.6em; 
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 8px;
+}
+.book-info-ds{
+  color: #fff;
+}
+.book-synopsis {
+  margin-bottom: 12px;
+}
+.read-more{
+  color: #2586af;
+}
+.book-info-row {
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: 1px;
+  margin-right: 5px;
+  align-items: center;
+  margin-bottom: 6px;
+}
+
+.book-info {
+  font-size: 9pt;
+  margin-left: 2px;
+  margin-right: 2px;
+}
+.span-txt{
+  font-weight: 600;
+  color: black;
+  
+}
+.dropdown-annum {
+  position: absolute;
+  top: 8px;
+  right: 42px;
+  z-index: 3;
+}
+
+
+.con-anum{
+  margin-top: 8rem;
+  display: flex;
+  justify-content: center;
+}
+
+
+.image-with-title {
+    position: relative;
+    width: 220px;
+    height: 300px;
+    border-radius: 20px;
+  }
+  
+  .icon-container-ca {
+    position: absolute;
+    top: 2px;
+    right: 45px;
+
+  }
+  
+  .icon-ca {
+    font-size: 24px;
+  }
+  
+  .image-ca {
+    width: 100%;
+    height: auto;
+  }
+  
+  .title-ca {
+    text-align: center;
+    align-items: center;
+
+    font-size: 12pt;
+    color: #fff;
+    position: absolute;
+    bottom: 10px;
+
+  }
+  .custom-carousel .carousel-control-prev-icon,
+  .custom-carousel .carousel-control-next-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    color: white;
+    width: 40px;
+    height: 40px;
+    margin-right: 10px;
+    border-radius: 50%;
+    cursor: pointer;
+  }
+  #icon-not-anum{
+    font-size: 150pt;
+
+
+  }
+  #icon-delete{
+   
+    color: black;
+    font-size: 10px;
+    font-weight: bold;
+    width: 18px;
+    height: 20px;
+    display: flex;
+    margin-right: 5px;
+    
+  }
+  #icon-edit{
+
+    color: black;
+    font-size: 28px;
+    font-weight: bold;
+    width: 18px;
+    height: 20px;
+    display: flex;
+    margin-right: 5px;
+    
+  }
+  
+  #drop-edit1{
+    background-color: transparent;
+    height: 20px;
+    width: 25px;
+    margin-top: 30px;
+    padding-top: 0px;
+    
+  }
+  #drop-edit2{
+    background-color: transparent;
+  } 
+  #drop-edit1:hover{
+    background-color: transparent;
+  }
+  #drop-edit2:hover{
+    background-color: transparent;
+  }
+  #icon-delete:hover{
+   
+  }
+  .col-not-anum{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 100px;
+    margin-bottom: 3rem;
+
+  }
+  .col-not-anum p{
+    font-size: 18pt;
+  }
+  .custom-carousel .carousel-control-next-icon {
+    margin-right: 0;
+    margin-left: 10px;
+  }
+  
+  .custom-carousel .carousel-control-prev-icon:hover,
+  .custom-carousel .carousel-control-next-icon:hover {
+    background-color: darkblue;
+  }
+  .div-txt{
+    margin-top: 8rem;
+  }
+  @media (max-width: 768px) {
+    .edit-cards-my{
+
+      display: flex;
+      flex-direction: column;
+      flex-wrap: wrap;
+  }
+  .book-synopsis {
+    margin-bottom: 12px;
+    font-size: 13px;
+  }
+  .book-title {
+    font-size: 10px;
+    font-weight: bold;
+    margin-bottom: 4px;
+  }
+  .card-anum {
+    position: relative;
+    display: flex;
+    background-color: #ffffff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    overflow: hidden;
+    width: 300px;
+    height: 340px;
+    margin: 20px;
+    border: 1px solid #ccc;
+  }
+  .title-ca {
+    text-align: center;
+    align-items: center;
+
+    font-size: 11pt;
+    color: #fff;
+    position: absolute;
+    bottom: 10px;
+
+  }
+  
+.book-title {
+  font-size: 14pt;
+  font-weight: bold;
+  margin-bottom: 8px;
+}
+
+.book-image {
+  width: 130px;
+  object-fit: cover;
+}
+.card-content {
+  padding: 12px;
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  align-items: center;
+}
+.info-card-aanum{
+  display: flex;
+  flex-direction: column;
+}
+}
+
+.cont-fav{
+    margin-top: 8rem;
+    
+}
+.cont-fav-tx{
+    display: flex;
+    flex-direction: column;
+}
+#tx-fav{
+    font-size: 28pt;
+    font-weight: 100;
+    color: #5d5c5c;
+    transition: 1s;
+    cursor: s-resize;
+}
+#tx-fav:hover{
+    transition: 1s;
+    color: rgb(40, 40, 40);
+}
+#tx-p-fav{
+    color: #bebcbc;
+}
+.card-icons{
+  display: flex;
+
+}
+.info-card-aanum{
+  display: flex;
+}
+#sin-edit{
+
+  color: #000000;
+}

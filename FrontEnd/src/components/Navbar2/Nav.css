@@ -1,4 +1,9 @@
-
+.navbar{
+  margin-bottom: 500rem;
+}
+.edit-nav-pr{
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
 .icon-size {
     font-size: 2rem;
     display: flex;
@@ -6,7 +11,7 @@
     margin-left: 10px;
   }
   #img-logo{
-    width: 120px;
+    width: 110px;
   }
   .icon{
     display: flex;
@@ -67,6 +72,9 @@
     width: 280px;
     color: #000000;
   }
+  #sua-conta-edit{
+    text-decoration: none;
+  }
   .icon-size-drop{
     font-size: 2rem;
     display: flex;
@@ -105,14 +113,22 @@
   .btn_nav{
     margin: 0px, 20px, 0px, 50px;
     margin-left: 10px;
-    background-image: linear-gradient(to top, #48c6ef 0%, #6f86d6 100%);
+    
     border: transparent;
     border-radius: 15px;
     font-weight: 500;
     color: #fff;
-   
+    transition: 2s;
     background-image: linear-gradient(to top,  #00aaffb7 0%,  #00a8ff 100%);
    
+  }
+  .btn_nav:hover{
+    background-image: linear-gradient(to top, #48c6ef 0%, #66aff9 100%);
+    transition: 2s;
+  }
+   #icon-nav-edit{
+    color: #000000;
+    font-size: 22pt;
   }
   @media (max-width: 600px) {
     .icon {

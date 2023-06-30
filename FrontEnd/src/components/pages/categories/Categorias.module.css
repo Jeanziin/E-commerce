@@ -1,0 +1,24 @@
+.container {
+    margin-top: 10rem;
+    display: flex;
+    margin-left: 2rem;
+  }
+  
+  .filters {
+    width: 550px;
+  
+    border-radius: 15px;
+    padding: 1rem;
+  
+  }
+  
+  .generes {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  
+  .Cards_Generes {
+    padding-left: 25px;
+  }
+ 

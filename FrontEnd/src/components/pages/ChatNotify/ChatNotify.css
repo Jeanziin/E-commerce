@@ -1,0 +1,80 @@
+.NotificationsChats{
+    display: flex;
+
+}
+
+.contentChats{
+    border-radius: 8px;
+    
+    
+}
+
+.col-Chat {
+  border: none;
+  background-color: #ffffff;
+  border-radius: 50px;
+  box-shadow:  7px 7px 14px #dbdada,-7px -7px 14px #f2f0f0;
+  margin-top: 100px;
+}
+
+.screenNotify{
+    width: 650px;
+    border-radius: 50px;
+    margin-right: 20px;
+}
+
+.textNotify{
+  border-top: 1px;
+  border-radius: 50px 50px 0px 0px;
+}
+
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+  }
+  
+  .content {
+    flex: 1;
+  }
+  
+  .Footer {
+    margin-top: auto;
+  }
+  
+
+@media (max-width: 768px) {
+    .screenNotify {
+        min-height: 200px; /* Ajuste a altura conforme necessário */
+      }
+
+    .NotificationsChats{
+        display: flex;
+        flex-direction: column;
+        height: 1200px;
+        
+    }
+    .contentChats{
+        border-right: 0px;
+        border-radius: 8px;
+    }
+    
+    .screenNotify{
+        width: 100%;
+    }
+    
+    .chat-container {
+        width: 100%;
+      }
+
+    .screenNotify{
+        padding: 0;
+        margin: 0;
+        height: 20px;
+    }
+
+    .responsiveDimensions{
+      margin-top: 20vh;
+    }
+    
+}

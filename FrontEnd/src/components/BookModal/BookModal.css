@@ -1,0 +1,70 @@
+/* Adicione este código CSS ao seu arquivo de estilos */
+
+.card-modal {
+    display: flex;
+    align-items: center;
+  }
+  
+  .card-modal .image {
+    flex: 0 0 40%;
+    margin-right: 20px;
+  }
+  
+  .card-modal .content {
+    flex: 1;
+  }
+  
+  .card-modal .content h5 {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+  }
+  
+  .card-modal .content p {
+    margin-bottom: 5px;
+  }
+  
+  .card-modal .content .author {
+    font-style: italic;
+  }
+  
+  .card-modal .content .price {
+    font-weight: bold;
+  }
+  
+  .card-modal .content .synopsis {
+    margin-top: 10px;
+  }
+  
+  .card-modal .content .posted-by {
+    margin-top: 10px;
+  }
+  
+  .card-modal .content .posted-by a {
+    text-decoration: none;
+    color: #007bff;
+    font-weight: bold;
+  }
+ 
+
+  .card-modal .content .whatsapp {
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+  }
+  
+  .card-modal .content .whatsapp svg {
+    margin-right: 5px;
+  }
+  
+  .card-modal .content .whatsClick {
+    cursor: pointer;
+  }
+  
+  .card-modal .footer {
+    margin-top: 20px;
+    display: flex;
+    justify-content: flex-end;
+  }
+  #tx-modal{
+    color: rgb(24, 24, 24);
+  }  

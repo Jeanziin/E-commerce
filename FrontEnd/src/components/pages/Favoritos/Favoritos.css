@@ -1,0 +1,22 @@
+.cont-fav{
+    margin-top: 8rem;
+    
+}
+.cont-fav-tx{
+    display: flex;
+    flex-direction: column;
+}
+#tx-fav{
+    font-size: 28pt;
+    font-weight: 100;
+    color: #5d5c5c;
+    transition: 1s;
+    cursor: s-resize;
+}
+#tx-fav:hover{
+    transition: 1s;
+    color: rgb(40, 40, 40);
+}
+#tx-p-fav{
+    color: #bebcbc;
+}

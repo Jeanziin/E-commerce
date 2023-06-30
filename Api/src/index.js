@@ -11,7 +11,8 @@ const router = require('./Routes/Router')
 
 const app = express()
 const server = http.createServer(app)
-const io = socketIO(server, {cors: {origin: 'http://localhost:3000'}})
+const io = socketIO(server, {cors: {origin: `${process.env.API}`}})
+
 
 const dbUri = process.env.DB_URI;
 

@@ -45,6 +45,19 @@ const Schema = new mongoose.Schema({
   state: {
     type: String,
     required: true
+  },
+  allowTrade: {
+    type: Boolean,
+    default: false
+  },
+  showOnMap: {
+    type: Boolean,
+    default: false
+  },
+
+  createdAt: {
+    type: String,
+    required: true
   }
 })
 

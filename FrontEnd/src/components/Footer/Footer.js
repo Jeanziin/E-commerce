@@ -4,6 +4,8 @@ import logoFooter from '../img/logo_footer.png'
 import '../Modal/Modal'
 import ModalPp from '../Modal/Modal';
 import ModalTc from '../Modal/ModalTc';
+import ModalSup from '../Modal/ModalSup';
+import ModalSobreNos from '../Modal/ModalSobreNos';
 
 //<div class="col-md-1 col-lg-1 col-xl-1 mx-auto mb-md-0 mb-4">
 
@@ -35,25 +37,25 @@ const Footer = () => {
             Categorias mais populares
           </h6>
           <p>
-            <a href="#!" class="text-reset">Ação</a>
+            <a href="/filter" class="text-reset">Ação</a>
           </p>
           <p>
-            <a href="#!" class="text-reset">Romance</a>
+            <a href="/filter" class="text-reset">Romance</a>
           </p>
           <p>
-            <a href="#!" class="text-reset">Drama</a>
+            <a href="/filter" class="text-reset">Drama</a>
           </p>
           <p>
-            <a href="#!" class="text-reset">Educação</a>
+            <a href="/filter" class="text-reset">Educação</a>
           </p>
           <p>
-            <a href="#!" class="text-reset">Infantil</a>
+            <a href="/filter" class="text-reset">Infantil</a>
           </p>
           <p>
-            <a href="#!" class="text-reset">História</a>
+            <a href="/filter" class="text-reset">História</a>
           </p>
           <p>
-            <a href="#!" class="text-reset">Biografia</a>
+            <a href="/filter" class="text-reset">Biografia</a>
           </p>
         </div>
      
@@ -63,13 +65,13 @@ const Footer = () => {
            Atendimento ao Usuário
           </h6>
           <p>
-            <a href="#!" class="text-reset">Sobre nós</a>
+            <a href="#!" class="text-reset"><ModalSobreNos/></a>
           </p>
           <p>
             <a href="#!" class="text-reset"><ModalTc/></a>
           </p>
           <p>
-            <a href="#!" class="text-reset">Suporte</a>
+            <a href="#!" class="text-reset"><ModalSup/> </a>
           </p>
           <p>
             
